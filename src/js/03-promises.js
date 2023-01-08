@@ -32,7 +32,6 @@ let delay = Number(refs.delayInp.value)
 let step = Number(refs.stepInp.value)
 
 for(let i = 1; i<= amount; i += 1){
-  console.log('position: ', i)
   let position = i
 
   createPromise(position, delay)
