@@ -15,11 +15,12 @@ stopBtnRef.setAttribute('disabled','')
 
 
  function buttonStartClickHandler(event){
+   startBtnRef.setAttribute('disabled','')
+   stopBtnRef.removeAttribute('disabled','')
+
      intervalId = setInterval(() =>{
     bodyRef.style.backgroundColor = getRandomHexColor()
 
-    startBtnRef.setAttribute('disabled','')
-    stopBtnRef.removeAttribute('disabled','')
     },1000) 
  }
  function buttonStopClickHandler(event){

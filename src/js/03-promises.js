@@ -1,5 +1,16 @@
 import Notiflix from 'notiflix';
 
+const refs = {
+  // button:document.querySelector('button'),
+  form: document.querySelector('.form'),
+
+  delayInp: document.querySelector('input[name="delay"'),
+  stepInp: document.querySelector('input[name="step"'),
+  amountInp: document.querySelector('input[name="amount"'),
+
+}
+refs.form.addEventListener('submit',submitFormHandler)
+
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
 
@@ -13,16 +24,6 @@ function createPromise(position, delay) {
   })
   
 }
-const refs = {
-  // button:document.querySelector('button'),
-  form: document.querySelector('.form'),
-
-  delayInp: document.querySelector('input[name="delay"'),
-  stepInp: document.querySelector('input[name="step"'),
-  amountInp: document.querySelector('input[name="amount"'),
-
-}
-refs.form.addEventListener('submit',submitFormHandler)
 
 function submitFormHandler(event){
   event.preventDefault()
